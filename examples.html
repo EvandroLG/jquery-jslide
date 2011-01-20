@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<title>jSlide [Plugn jQuery] - EXAMPLE</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+    	<h1>jSlide <span>(version beta)</span></h1>
+		<div class="boxSlide boxSlideHorizontal" id="boxSlideSimple">
+			<a href="javascript:;" class="btnPrev off">Preview</a>
+			<div class="slide">
+				<ul>
+					<li><img src="images/sandripples.jpg" width="100" height="80" alt="" /></li>
+					<li><img src="images/IMG_5363_1.jpg" width="100" height="80" alt="" /></li>
+					<li><img src="images/sm&wt205.jpg" width="100" height="80" alt="" /></li>
+                    <li><img src="images/IMG_7777.jpg" width="100" height="80" alt="" /></li>
+					<li><img src="images/IMG_2969d2.jpg" width="100" height="80" alt="" /></li>
+                    <li><img src="images/Thingvellir.jpg" width="100" height="80" alt="" /></li>
+					<li><img src="images/Landslagymislegt_365.jpg" width="100" height="80" alt="" /></li>
+					<li><img src="images/P8013937.JPG" width="100" height="80" alt="" /></li>
+                    <li><img src="images/000092.jpg" width="100" height="80" alt="" /></li>
+					<li><img src="images/Vienna_2008_012.JPG" width="100" height="80" alt="" /></li>
+				</ul>
+			</div>
+			<a href="javascript:;" class="btnNext off">Next</a>
+		</div>
+        
+        <div class="clr"><!-- --></div>
+        
+        <div class="boxSlide boxSlideVertical" id="boxSlideVertical">
+			<a href="javascript:;" class="btnPrev off">Preview</a>
+			<div class="slide">
+				<ul>
+					<li><img src="images/IMG_6367d.jpg" width="100" height="80" alt="" /></li>
+					<li><img src="images/IMG_1308xll.jpg" width="100" height="80" alt="" /></li>
+					<li><img src="images/IMG_14517d.jpg" width="100" height="80" alt="" /></li>
+                    <li><img src="images/_DAN6300-Modifier-Modifier.jpg" width="100" height="80" alt="" /></li>
+				</ul>
+			</div>
+			<a href="javascript:;" class="btnNext off">Next</a>
+		</div>
+        
+        <div class="clr"><!-- --></div>
+        
+        <div class="boxSlide boxSlideHorizontal" id="boxScrollAuto">
+			<a href="javascript:;" class="btnPrev off">Preview</a>
+			<div class="slide">
+				<ul>
+					<li><img src="images/sm&wt205.jpg" width="100" height="80" alt="" /></li>
+					<li><img src="images/106597850.jpg" width="100" height="80" alt="" /></li>
+					<li><img src="images/106585442.jpg" width="100" height="80" alt="" /></li>
+                    <li><img src="images/IMG_5363_1.jpg" width="100" height="80" alt="" /></li>
+				</ul>
+			</div>
+			<a href="javascript:;" class="btnNext off">Next</a>
+		</div>
+        
+        <div class="clr"><!-- --></div>
+        
+        <div class="boxSlide boxSlideHorizontal" id="boxJson">
+        	<a href="javascript:;" class="btnPrev off">Preview</a>
+            <div class="slide"></div>
+            <a href="javascript:;" class="btnNext off">Next</a>
+        </div>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.jslide.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#boxSlideSimple").jSlide({elemByPages:4});
+				$("#boxSlideVertical").jSlide({pagination:false, vertical:true});
+				$("#boxScrollAuto").jSlide({autoScroll:3});
+				$("#boxJson").jSlide({elemByPages:2, ajax:"data.js", autoScroll:5});
+			});
+		</script>
+	</body>
+</html>
